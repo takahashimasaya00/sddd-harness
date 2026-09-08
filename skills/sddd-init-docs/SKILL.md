@@ -158,6 +158,7 @@ Step 2 の調査結果をもとに、プロジェクトの「ビジネス目的�
 - 📄 [data-models.md](file:///docs/spec/data-models.md): 主要エンティティ、型定義、リレーション（計 Y モデル）
 - 📄 [features.md](file:///docs/spec/features.md): 機能マップ、画面仕様、ユースケース（計 Z 画面/機能）
 - 📄 [0001-technology-stack.md](file:///docs/adr/0001-technology-stack.md): 初期技術スタック選定の記録
+- 📝 **コミットメッセージ案**: Conventional Commit形式に則ったコミットメッセージ案（生成したファイル群の概要を含めること）
 
 ---
 

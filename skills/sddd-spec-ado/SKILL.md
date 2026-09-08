@@ -172,3 +172,4 @@ Azure DevOpsで管理されているワークアイテム（Product Backlog Item
      ```
 
 5. 作成後、起票したすべての Task の ID とタイトル、ならびに作成した `docs/proposals/` ファイルのパスをユーザーに報告する。
+6. **コミットメッセージ案**: 報告の最後に、Conventional Commit形式に則ったコミットメッセージ案（追加・更新したファイルと対象のADO PBI/Bug IDを含めること）を提示する。

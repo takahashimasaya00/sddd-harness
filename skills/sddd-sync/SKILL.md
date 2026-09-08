@@ -119,6 +119,8 @@ description: Reverse-sync and reflect code changes (e.g., from one-shot implemen
   - 体組成トレンド分析画面のUI仕様とエラー再試行フローを追記
 - **`docs/adr/`**:
   - （ADR起票を行った場合、または起票不要と判断した理由を記載）
+- **コミットメッセージ案**:
+  - Conventional Commit形式に則ったコミットメッセージ案（同期した機能・仕様の概要を含めること）
 ```
 
 ---
