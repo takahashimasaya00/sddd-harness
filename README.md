@@ -2,6 +2,8 @@
 
 スキル・ドキュメント駆動開発（Skill-Doc Driven Development）のハーネス
 
+![SDDD Concept](./docs/images/sddd_concept.jpg)
+
 ## Skills概要 📖
 
 ### sddd-init-docs 🏗️
