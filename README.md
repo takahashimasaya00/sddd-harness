@@ -4,6 +4,11 @@ Skillsとドキュメントを共通言語に、人とAIの協調開発を支え
 
 ![SDDD Concept](./docs/images/sddd_concept.jpg)
 
+### SDDDを支える2つの柱 🏛️
+
+- **Documents（ドキュメント）**: プロジェクトの「Single Source of Truth（単一の真実の情報源）」。AIと人間が仕様や設計のコンテキストを共有し、ブレなく開発を進めるための指針となる。
+- **Skills（スキル）**: 開発プロセスの「Executable Runbook（実行可能な手順書）」。要件定義から実装、ドキュメント同期まで、各工程におけるAIの動きを制御する軽量ハーネスとして機能し、高品質なアウトプットを安定して引き出す。
+
 ## Skills概要 📖
 
 ### sddd-init-docs 🏗️
