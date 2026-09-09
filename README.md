@@ -1,6 +1,6 @@
-# sddd-harness 🛠️
+# SDDD Harness 🛠️
 
-スキル・ドキュメント駆動開発（Skill-Doc Driven Development）のハーネス
+Skillsとドキュメントを共通言語に、人とAIの協調開発を支える『スキル・ドキュメント駆動開発（Skill-Doc Driven Development）』の軽量ハーネス
 
 ![SDDD Concept](./docs/images/sddd_concept.jpg)
 
