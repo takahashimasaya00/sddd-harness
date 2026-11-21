@@ -25,13 +25,12 @@ Azure DevOpsのワークアイテムを明確にするためのSkills。
 
 ### sddd-spec-ado 📐
 
-Azure DevOpsのワークアイテムを基に設計を行うSkills。
-この時点では設計草案として出力する。
+Azure DevOpsのワークアイテムを基に設計を行い、親アイテムへの技術設計サマリー追記と具体的な子Task起票を行うSkills（必要に応じてADRも起票）。
 
 ### sddd-implement-ado 💻
 
-設計草案とAzure DevOps Taskを基に実装を行うSkills。
-実装後に設計草案を設計書に反映する。
+Azure DevOpsの親アイテム（技術設計サマリー・受入基準）と子Taskを基に実装を行うSkills。
+実装後に `docs/spec/` を最新の実装内容へJIT同期する。
 
 ### sddd-sync 🔄
 
@@ -43,8 +42,6 @@ Skillsによって生成されるフォルダ構成例。
 
 ```
 docs/
-  proposals/
-    pbi-123.md (設計草案/Blueprint)
   spec/
     features.md
     data-models.md
