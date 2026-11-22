@@ -42,6 +42,10 @@ Skillsとドキュメントを共通言語に、人とAIの協調開発を支え
 
 ワンショットで実装したコードを設計に反映するSkills。
 
+### sddd-commit 📝
+
+`git-commit` スキルをベースに、日本語の Conventional Commit メッセージ案を生成する薄いラッパーSkills（commitlint 100文字制限準拠・Git書き込みなしの提案専用）。
+
 ## フォルダ構成 📁
 
 Skillsによって生成されるフォルダ構成例。
@@ -83,6 +87,7 @@ my-project.code-workspace
 ## 依存Skills・MCP 🔌
 - [grill-with-docs](https://github.com/mattpocock/skills/blob/main/docs/engineering/grill-with-docs.md)
 - [grilling](https://github.com/mattpocock/skills/blob/main/docs/productivity/grilling.md)
+- [git-commit](https://github.com/github/awesome-copilot/blob/main/skills/git-commit/SKILL.md)
 - [Azure DevOps MCP](https://github.com/microsoft/azure-devops-mcp)
 
 ## モデル最適配分戦略 🚀
@@ -125,6 +130,7 @@ flowchart TD
 | **`sddd-spec`** / **`sddd-spec-ado`** | **上級** 👑 | 中（PBIごと） | **Planの中核！** 既存仕様・ADR・デザインを横断統合し、「下級モデルが迷わず実装できる精密なロードマップ」を作る。ここを上級にするからこそ下流で節約できる。 |
 | **`sddd-implement`** / **`sddd-implement-ado`** | **下級** ⚡ | **極高（日常）** | **最大のトークン削減ポイント！** Task に目的・ファイル・参照仕様・テストコマンドが明記されているため、下級モデルのコード生成＋テスト自己修復で十分回る。 |
 | **`sddd-sync`** | **下級〜中級** ⚡ | 高（日常） | Git diffから変更箇所（型・API・画面）を抽出し、既存ドキュメントのフォーマットにマッピングして追記する定型作業が主。下級モデルで十分こなせる。 |
+| **`sddd-commit`** | **下級** ⚡ | **極高（日常）** | Git diffと `commitlint` 規約から日本語Conventional Commit案を生成する軽量タスク。下級モデルで高速・低コストに回る。 |
 
 ### 3. コスト削減を最大化する運用のコツ 💡
 
