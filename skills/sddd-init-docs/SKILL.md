@@ -47,6 +47,9 @@ description: >-
 
 ## ワークフロー手順
 
+> [!NOTE]
+> **ポリレポ / マルチルートワークスペース対応**: ワークスペース内に複数リポジトリ（複数ルート、または直下の子ディレクトリに複数の `.git`）が存在する場合は、[polyrepo-guidelines.md](./references/polyrepo-guidelines.md) を読み込み、そのルールを併せて適用すること。
+
 ### Step 1: 既存 `docs/` の事前チェック & 上書きポリシー確認
 
 1. リポジトリ直下に `docs/spec/` や `docs/adr/` が既に存在するか確認する。

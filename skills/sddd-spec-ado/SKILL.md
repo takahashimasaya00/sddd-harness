@@ -40,6 +40,9 @@ Azure DevOpsで管理されているワークアイテム（Product Backlog Item
 
 ## ワークフロー手順
 
+> [!NOTE]
+> **ポリレポ / マルチルートワークスペース対応**: ワークスペース内に複数リポジトリ（複数ルート、または直下の子ディレクトリに複数の `.git`）が存在する場合は、[polyrepo-guidelines.md](./references/polyrepo-guidelines.md) を読み込み、そのルールを併せて適用すること。
+
 ### Step 1: Azure DevOps ワークアイテムの取得 & 前提調査
 
 1. ユーザーから Work Item ID（例: `#123` または `123`）を受け取る。

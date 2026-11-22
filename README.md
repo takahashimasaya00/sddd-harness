@@ -55,6 +55,20 @@ docs/
     tokens.md
 ```
 
+### モノレポ / ポリレポ両対応 🧩
+
+各スキルはワークスペース内の `.git` 配置およびマルチルート構成から**単一リポジトリ（モノレポ含む）かポリレポかを自動判定**する。
+
+- **単一リポジトリ / モノレポ**: 追加設定不要でルート直下の `docs/` をそのまま利用する。
+- **ポリレポ（ワークスペースまとめ運用）**: ドキュメント集約用のメタリポジトリ（例: `project-docs/`）に `docs/` を配置し、`.code-workspace` または親フォルダ配下で各アプリリポジトリと束ねる構成を推奨。複数リポジトリを検出すると、各スキルの `references/polyrepo-guidelines.md` が自動適用され、リポジトリ名付きパス・実行ディレクトリ指定・`git -C` 差分取得・リポジトリ別コミットメッセージ案が有効になる。
+
+```text
+my-project.code-workspace
+├── project-docs/       ← docs/spec, docs/adr, docs/design を集約（SSOT）
+├── frontend-repo/
+└── backend-repo/
+```
+
 ## 依存Skills・MCP 🔌
 - [grill-with-docs](https://github.com/mattpocock/skills/blob/main/docs/engineering/grill-with-docs.md)
 - [grilling](https://github.com/mattpocock/skills/blob/main/docs/productivity/grilling.md)

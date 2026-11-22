@@ -35,6 +35,9 @@ description: Reverse-sync and reflect code changes (e.g., from one-shot implemen
 
 ## ワークフロー手順
 
+> [!NOTE]
+> **ポリレポ / マルチルートワークスペース対応**: ワークスペース内に複数リポジトリ（複数ルート、または直下の子ディレクトリに複数の `.git`）が存在する場合は、[polyrepo-guidelines.md](./references/polyrepo-guidelines.md) を読み込み、そのルールを併せて適用すること。
+
 ### Step 1: 変更コードの特定と調査
 
 1. 同期対象となるコード変更を特定する：

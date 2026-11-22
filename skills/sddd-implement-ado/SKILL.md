@@ -37,6 +37,9 @@ description: >-
 
 ## ワークフロー手順
 
+> [!NOTE]
+> **ポリレポ / マルチルートワークスペース対応**: ワークスペース内に複数リポジトリ（複数ルート、または直下の子ディレクトリに複数の `.git`）が存在する場合は、[polyrepo-guidelines.md](./references/polyrepo-guidelines.md) を読み込み、そのルールを併せて適用すること。
+
 ### Step 1: ADO Task & 親ワークアイテムの特定 & 実装計画の立案
 
 1. **対象 Task の特定**:
