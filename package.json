@@ -1,0 +1,29 @@
+{
+  "name": "sddd-harness",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Skill-Doc Driven Development Harness",
+  "scripts": {
+    "prepare": "husky",
+    "lint:skills": "node scripts/validate-skills.mjs",
+    "lint:links": "node scripts/check-links.mjs",
+    "lint": "npm run lint:skills && npm run lint:links"
+  },
+  "lint-staged": {
+    "*.md": [
+      "node scripts/check-links.mjs"
+    ],
+    "skills/**": [
+      "node scripts/validate-skills.mjs"
+    ]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "agent-skills-ts-sdk": "^2.5.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.2",
+    "markdown-link-check": "^3.15.0"
+  }
+}
