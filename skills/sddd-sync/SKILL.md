@@ -98,6 +98,7 @@ description: Reverse-sync and reflect code changes (e.g., from one-shot implemen
 > 「今回の実装において、以下の重要なアーキテクチャ上の決定（例: ○○の採用）が検出されました。ADR（`docs/adr/XXXX-xxx.md`）として起票しますか？」
 
 ユーザーの合意が得られた場合、最新の連番を採番し、既存ADRと同じフォーマット（Context, Decision, Status）でファイルを作成する。
+※ 既存のADRを覆す決定である場合、旧ADRの本文は削除・書き換えせず、`Status` のみを `Superseded by XXXX` へ更新する（イミュータブル原則）。
 
 ---
 
