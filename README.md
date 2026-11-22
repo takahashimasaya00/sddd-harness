@@ -19,18 +19,24 @@ Skillsとドキュメントを共通言語に、人とAIの協調開発を支え
 
 デザインコンセプトを明確にするためのSkills。
 
-### sddd-refinement-ado 🎯
+### sddd-refinement / sddd-refinement-ado 🎯
 
-Azure DevOpsのワークアイテムを明確にするためのSkills。
+要件やワークアイテムを明確にするためのSkills。
+- **`sddd-refinement`**: `docs/backlog/` に構造化Markdownとして書き出す（ローカル完結版）
+- **`sddd-refinement-ado`**: Azure DevOpsのワークアイテムへ反映する（ADO連携版）
 
-### sddd-spec-ado 📐
+### sddd-spec / sddd-spec-ado 📐
 
-Azure DevOpsのワークアイテムを基に設計を行い、親アイテムへの技術設計サマリー追記と具体的な子Task起票を行うSkills（必要に応じてADRも起票）。
+要件・アイテムを基に設計を行い、親アイテムへの技術設計サマリー追記と具体的な子Task作成を行うSkills（必要に応じてADRも起票）。
+- **`sddd-spec`**: 親ファイルへの追記と `docs/backlog/<###>-<slug>/task-XX-*.md` の書き出し（ローカル完結版）
+- **`sddd-spec-ado`**: Azure DevOpsの親アイテム更新と子Task起票（ADO連携版）
 
-### sddd-implement-ado 💻
+### sddd-implement / sddd-implement-ado 💻
 
-Azure DevOpsの親アイテム（技術設計サマリー・受入基準）と子Taskを基に実装を行うSkills。
+親アイテム（技術設計サマリー・受入基準）と子Taskを基に実装を行うSkills。
 実装後に `docs/spec/` を最新の実装内容へJIT同期する。
+- **`sddd-implement`**: `docs/backlog/` のTaskファイルに基づき実装し、フロントマター `status` を `done` へ更新（ローカル完結版）
+- **`sddd-implement-ado`**: Azure DevOpsのTaskに基づき実装し、ADOのStateを `Done` へ更新（ADO連携版）
 
 ### sddd-sync 🔄
 
@@ -53,6 +59,11 @@ docs/
   design/
     concept.md
     tokens.md
+  backlog/                  # ローカル完結版 (sddd-refinement/spec/implement) 使用時
+    001-login-screen/
+      pbi.md
+      task-01-api.md
+      task-02-ui.md
 ```
 
 ### モノレポ / ポリレポ両対応 🧩
@@ -110,9 +121,9 @@ flowchart TD
 | :--- | :---: | :---: | :--- |
 | **`sddd-init-docs`** | **上級** 👑 | 極低（初回1回） | コード全体を俯瞰して「適切な抽象度の仕様書」へ落とし込む高い要約力が必要。**1度きりの実行**なのでケチらず上級で高品質な土台を作るのが吉。 |
 | **`sddd-design-concept`** | **上級** 👑 | 低（初期/改修時） | 抽象的な世界観・UX思想を対話（Grilling）で引き出し、破綻のないトークン体系に落とし込む高度な推論力が必要。 |
-| **`sddd-refinement-ado`** | **上級** 👑 | 中（PBIごと） | ユーザーの暗黙の前提を崩す「鋭い推論ツリー（Grilling）」と「筋の良い推奨解」の提示が命。ここで妥協すると手戻りコストが激増する。 |
-| **`sddd-spec-ado`** | **上級** 👑 | 中（PBIごと） | **Planの中核！** 既存仕様・ADR・デザインを横断統合し、「下級モデルが迷わず実装できる精密なロードマップ」を作る。ここを上級にするからこそ下流で節約できる。 |
-| **`sddd-implement-ado`** | **下級** ⚡ | **極高（日常）** | **最大のトークン削減ポイント！** Task に目的・ファイル・参照仕様・テストコマンドが明記されているため、下級モデルのコード生成＋テスト自己修復で十分回る。 |
+| **`sddd-refinement`** / **`sddd-refinement-ado`** | **上級** 👑 | 中（PBIごと） | ユーザーの暗黙の前提を崩す「鋭い推論ツリー（Grilling）」と「筋の良い推奨解」の提示が命。ここで妥協すると手戻りコストが激増する。 |
+| **`sddd-spec`** / **`sddd-spec-ado`** | **上級** 👑 | 中（PBIごと） | **Planの中核！** 既存仕様・ADR・デザインを横断統合し、「下級モデルが迷わず実装できる精密なロードマップ」を作る。ここを上級にするからこそ下流で節約できる。 |
+| **`sddd-implement`** / **`sddd-implement-ado`** | **下級** ⚡ | **極高（日常）** | **最大のトークン削減ポイント！** Task に目的・ファイル・参照仕様・テストコマンドが明記されているため、下級モデルのコード生成＋テスト自己修復で十分回る。 |
 | **`sddd-sync`** | **下級〜中級** ⚡ | 高（日常） | Git diffから変更箇所（型・API・画面）を抽出し、既存ドキュメントのフォーマットにマッピングして追記する定型作業が主。下級モデルで十分こなせる。 |
 
 ### 3. コスト削減を最大化する運用のコツ 💡
